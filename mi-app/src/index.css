@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap');
+
+/* Reseteo básico para quitar márgenes por defecto */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* Fondo oscuro similar al de la imagen */
+  background-color: #111111; 
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Contenedor del header */
+.navbar-header {
+  background-color: #1a1a1a; /* Un tono apenas más claro que el fondo */
+  padding: 1.5rem 7%;
+  border-bottom: 1px solid #333;
+}
+
+/* Flexbox para alinear el contenido a la derecha */
+.navbar-nav {
+  display: flex;
+  justify-content: flex-end; 
+}
+
+/* Quitar los puntos de la lista y espaciar los elementos */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem; /* Espacio entre cada enlace */
+}
+
+/* Estilos de los enlaces */
+.navbar-links a {
+  text-decoration: none;
+  color: #f4f4f4; /* Texto claro por defecto */
+  font-size: 19px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+/* Efecto hover general */
+.navbar-links a:hover {
+  color: #0033FF;
+}
+
+/* ESTADO ACTIVO: Color azul solicitado */
+.navbar-links a.active {
+  color: #0033FF;
+}
+
+/* Opcional: que el hover del activo siga siendo azul */
+.navbar-links a.active:hover {
+  color: 	#103F79; 
+}
+
+
+
+/* Estilos principales de la palabra "About" */
+.section-heading {
+  position: relative;
+  font-size: 44px;    /* Mucho más grande, como querías */
+  font-weight: 700;     /* Negrita clásica */
+  margin-top: 5rem;
+  margin-bottom: 13rem;
+  z-index: 9999;
+  text-align: center;   /* Para asegurar que quede centrado */
+  color: #f4f4f4;
+}
+
+/* El resaltador usando ::before y border-bottom */
+.about_heading::before {
+  content: "";
+  width: 130px;
+  display: block;
+  position: relative;
+  left: 3.5rem;
+  top: 3.5rem;
+  z-index: -1;
+  border-bottom: 18px solid #0033FF;
+  margin: 0px auto;
+}
