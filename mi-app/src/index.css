@@ -37,7 +37,7 @@ body {
 .navbar-links a {
   text-decoration: none;
   color: #f4f4f4; /* Texto claro por defecto */
-  font-size: 19px;
+  font-size: 1.2rem;
   font-weight: 500;
   letter-spacing: 1px;
   transition: color 0.3s ease;
@@ -60,27 +60,207 @@ body {
 
 
 
-/* Estilos principales de la palabra "About" */
+/* Estilos principales de la palabra "Sobre mi" */
 .section-heading {
   position: relative;
-  font-size: 44px;    /* Mucho más grande, como querías */
-  font-weight: 700;     /* Negrita clásica */
-  margin-top: 5rem;
-  margin-bottom: 13rem;
+  font-size: 2.8rem;    
+  font-weight: 700; 
+  margin-top: 4rem;
+  margin-bottom: 6rem;
   z-index: 9999;
-  text-align: center;   /* Para asegurar que quede centrado */
+  text-align: center;
   color: #f4f4f4;
 }
 
 /* El resaltador usando ::before y border-bottom */
 .about_heading::before {
   content: "";
-  width: 130px;
+  width: 12rem;        
   display: block;
   position: relative;
-  left: 3.5rem;
-  top: 3.5rem;
+  left: 2rem;          
+  top: 3.4rem;           
   z-index: -1;
-  border-bottom: 18px solid #0033FF;
-  margin: 0px auto;
+  border-bottom: 1.1rem solid #0033FF; 
+  margin: 0 auto;
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Centra verticalmente ambas columnas */
+  max-width: 1200px;   /* Evita que se estire infinitamente en monitores grandes */
+  margin: 0 auto;      /* Centra el contenedor en la pantalla */
+  gap: 10rem;           /* Espacio entre el texto y la grilla */
+  padding: 0 2rem;
+}
+
+/* Le damos a cada columna la mitad del espacio disponible */
+.about-perfil {
+  flex: 1;
+  color: #f4f4f4;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.tech-grid-container {
+  flex: 1; /* Le dice al layout principal que ocupe la mitad derecha de la pantalla */
+  display: grid; /* Activa el modelo de caja de cuadrícula en el DOM */
+  grid-template-columns: repeat(3, 1fr); /* Genera 3 columnas idénticas (1 fracción de espacio cada una) */
+  gap: 1.5rem; /* Establece una canaleta de separación entre las filas y las columnas */
+  align-items: center;
+  padding: 2rem 0;
+}
+
+/* --- Estructura de la Tarjeta --- */
+.tech-card {
+  background-color: transparent;
+  border: 2px solid #f4f4f4; /* Dibuja el borde gris */
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+/* --- Texto de la tecnología --- */
+.tech-name {
+  color: #f4f4f4; /* Texto claro para contrastar con tu fondo */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* El motor CSS calcula la posición de cada tarjeta en el DOM. Las que caen en (3n + 2) forman la columna central */
+.tech-card:nth-child(3n + 2) {
+  transform: translateY(-40px); /* Desplaza los nodos hacia arriba en el eje Y */
+}
+
+/* Mantiene el desfase cuando se hace hover y la tarjeta hace su propia animación */
+.tech-card:nth-child(3n + 2):hover {
+  transform: translateY(-45px); 
+}
+
+.tech-icon-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain; 
+  margin-bottom: 0.5rem;
+}
+
+.perfil-silhouette {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* La imagen en sí: controla el tamaño */
+.imagen-perfil {
+  width: 150px;
+  height: auto;
+}
+
+.tech-card:hover {
+  transform: translateY(-5px);
+  border-color: #0033FF; 
+  box-shadow: 0 0 15px #0033FF; 
+}
+
+.projects_heading::before {
+  content: "";
+  width: 12rem;          
+  display: block;
+  position: relative;
+  left: 2rem;            
+  top: 3.4rem;           
+  z-index: -1;
+  border-bottom: 1.1rem solid #ff4a57; 
+  margin: 0 auto;
+}
+
+/* --- 2. Contenedor de la Sección --- */
+.projects-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem; /* Espacio vertical entre proyecto y proyecto */
+}
+
+/* --- 3. Tarjeta de Proyecto (Flexbox principal) --- */
+.project-card {
+  display: flex;
+  align-items: center;
+  gap: 4rem; /* Separación horizontal entre la imagen y el texto */
+}
+
+/* --- 4. El Bloque Azul (Izquierda) --- */
+.project-visual {
+  flex: 1.2; 
+  background-color: #311bb6; 
+  padding: 4rem 0 4rem 4rem; /* Arriba, Derecha (0), Abajo, Izquierda */
+  border-radius: 8px 0 0 8px;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: -15px 15px 35px rgba(0, 0, 0, 0.6); 
+}
+
+/* --- 5. La Información (Derecha) --- */
+.project-info {
+  flex: 1;
+}
+
+.project-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #f4f4f4;
+  margin-bottom: 0.2rem;
+}
+
+.project-subtitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #f4f4f4;
+  margin-bottom: 1.5rem;
+}
+
+.project-desc {
+  color: #a0a0a0;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+}
+
+/* --- 6. Enlaces / Botones --- */
+.project-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.project-link {
+  color: #f4f4f4;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent; 
+  padding-bottom: 0.3rem;
+  transition: all 0.3s ease;
+}
+
+.project-link:hover {
+  border-bottom: 2px solid #ff4a57; 
+  color: #ff4a57;
 }
