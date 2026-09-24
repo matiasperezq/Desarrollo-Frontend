@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #111111; 
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Contenedor del header */
+.navbar-header {
+  background-color: #1a1a1a;
+  padding: 1.5rem 7%;
+  border-bottom: 1px solid #333;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: flex-end; 
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #f4f4f4;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #0033FF;
+}
+
+.navbar-links a.active {
+  color: #0033FF;
+}
+
+.navbar-links a.active:hover {
+  color: 	#103F79; 
+}
+
+.section-heading {
+  position: relative;
+  font-size: 2.8rem;    
+  font-weight: 700; 
+  margin-top: 4rem;
+  margin-bottom: 6rem;
+  z-index: 9999;
+  text-align: center;
+  color: #f4f4f4;
+}
+
+.about_heading::before {
+  content: "";
+  width: 12rem;        
+  display: block;
+  position: relative;
+  left: 2rem;          
+  top: 3.4rem;           
+  z-index: -1;
+  border-bottom: 1.1rem solid #0033FF; 
+  margin: 0 auto;
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  max-width: 1200px;   
+  margin: 0 auto;      
+  gap: 10rem;           
+  padding: 0 2rem;
+}
+
+.about-perfil {
+  flex: 1;
+  color: #f4f4f4;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.tech-grid-container {
+  flex: 1; 
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 1.5rem; 
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.tech-card {
+  background-color: transparent;
+  border: 2px solid #f4f4f4;
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.tech-name {
+  color: #f4f4f4; 
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.tech-card:nth-child(3n + 2) {
+  transform: translateY(-40px); 
+}
+
+.tech-card:nth-child(3n + 2):hover {
+  transform: translateY(-45px); 
+}
+
+.tech-icon-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain; 
+  margin-bottom: 0.5rem;
+}
+
+.perfil-silhouette {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.imagen-perfil {
+  width: 150px;
+  height: auto;
+}
+
+.tech-card:hover {
+  transform: translateY(-5px);
+  border-color: #0033FF; 
+  box-shadow: 0 0 15px #0033FF; 
+}
+
+.projects-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem; 
+}
+
+.project-card {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+
+.project-visual {
+  flex: 1.2; 
+  background-color: #311bb6; 
+  padding: 4rem 0 4rem 4rem; 
+  border-radius: 8px 0 0 8px;
+}
+
+.project-card.reverse {
+  flex-direction: row-reverse;
+}
+
+.project-card.reverse .project-visual {
+  padding: 4rem 4rem 4rem 0; 
+  border-radius: 0 8px 8px 0; 
+}
+
+
+.project-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: -15px 15px 35px rgba(0, 0, 0, 0.6); 
+}
+
+.project-info {
+  flex: 1;
+}
+
+.project-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #f4f4f4;
+  margin-bottom: 0.2rem;
+}
+
+.project-desc {
+  color: #a0a0a0;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+}
+
+.project-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.project-link {
+  color: #f4f4f4;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent; 
+  padding-bottom: 0.3rem;
+  transition: all 0.3s ease;
+}
+
+.project-link:hover {
+  border-bottom: 2px solid #0033FF; 
+  color: #0033FF;
+}
+
+
+.footer{
+  background-color: #1a1a1a; 
+  color: #f4f4f4; 
+  text-align: center; 
+  padding: 1rem 0;
+}
